@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Welcome to the anagram app!</h1>
+  
+  <% if @anagram %>
+    <%= "This is the anagram:" %>
+    <br>
+    <% @anagram.map do |word| %>
+      <%= word %>
+    <br>
+    <% end %>
+    <br>
+    <br>
+  <% else %>
+    <%= "no anagram found" %>
+  <% end %>
+
+  <form action="/" method="post">
+    Enter a word to find out if it's an anagram!
+    <br>
+    <input type="text" name="user_input">
+    <input type="submit" value="Submit!">
+  </form>
+</div>
